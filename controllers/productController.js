@@ -1,4 +1,3 @@
-// const router = require('../routes/apis');
 const getCatalogue = (request, response) => {
     const catalogServices = require('../services/productServices');
     catalogServices.searchService(function(err, rows) {
@@ -8,10 +7,9 @@ const getCatalogue = (request, response) => {
 
 const getProductByID = (request, response) => {
     const catalogServices = require('../services/productServices');
-    let reference = request.params.reference;
+    let reference = request.params.id;
     catalogServices.searchIDService(reference, function(err, rows) {
-        response.json(rows);
-        response.end();
+        response.render('article', { product: rows });
     });
 };
 
