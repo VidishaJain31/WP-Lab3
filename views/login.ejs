@@ -1,11 +1,12 @@
 <%- include('header'); -%> 
 <div class="contact"> 
-    <form method="post">
+    <form action="/api/login" method="post" >
+        <br>
         <label for="">UserName : </label>
-        <input type="text" name="" id=""><br>
+        <input type="text" name="username" required><br><br>
         <label for="">Password : </label>
-        <input type="password" name="" id=""><br>
-        <button type="submit">Sumbit</button>
+        <input type="password" name="password" required><br><br>
+        <button type="submit">Sumbit</button><br><br> 
     </form>
 </div> 
 <%- include('footer'); -%>

@@ -1,0 +1,42 @@
+<%- include('header'); -%>
+    <div class="content">
+        <h1>Article</h1>
+        <table id="article">
+            <tbody>
+                <tr>
+                    <td scope="row">
+                        Name
+                    </td>
+                    <td>
+                        <%= product.name %>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">
+                        Reference
+                    </td>
+                    <td>
+                        <%= product.reference %>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">
+                        Category
+                    </td>
+                    <td>
+                        <%= product.category %>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">
+                        Price
+                    </td>
+                    <td>
+                        <%= product.price %>AED
+                    </td>
+                </tr>
+                <br>
+            </tbody>
+        </table>
+    </div>
+<%- include('footer'); -%>
